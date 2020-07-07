@@ -1,16 +1,10 @@
-import express, { request, response } from 'express'
-
+import express from 'express'
+import routes from './routes'
 const app = express() //CRIAÇÃO DA APLICAÇÃO
 
-app.get("/users", (req, res) => {
-    
-    res.json([
-        'diego',
-        'robson'
-        //KK
+app.use(express.json());
 
-    ])
-})
+app.use(routes)
 
 //porta que a aplicação vai estar "escutando"
 app.listen(3333)
