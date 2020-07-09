@@ -7,4 +7,4 @@ const connection = knex({
         filename: path.resolve(__dirname,'database.sqlite')
     }
 })
-    export default connection
+    export default connection //para conseguir ser importada em outro lugar.
